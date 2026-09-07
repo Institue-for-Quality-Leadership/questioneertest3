@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IQL — Institute for Quality Leadership</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{
+    background: var(--color-bg);
+    color: var(--color-white);
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero{
+    position: relative;
+    overflow: hidden;
+    background: var(--color-bg);
+    padding: clamp(56px, 10vw, 120px) clamp(20px, 6vw, 89px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: clamp(560px, 92vh, 900px);
+  }
+
+  .hero-bg{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    opacity: .55;
+    pointer-events: none;
+  }
+  .hero-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-content{
+    position: relative;
+    z-index: 1;
+    max-width: 1136px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(22px, 4vw, 30px);
+  }
+
+  .tagline{
+    background: var(--color-tagline-bg);
+    color: var(--color-white);
+    padding: clamp(6px, .8vw, 6.4px) clamp(16px, 2.5vw, 25.7px);
+    border-radius: clamp(10px, 1.4vw, 12.9px);
+    font-size: clamp(0.9375rem, 0.7rem + 0.75vw, 1.25rem);
+    line-height: 1.4;
+  }
+
+  .headline{
+    margin: 0;
+    width: 100%;
+  }
+
+  .headline-script{
+    display: block;
+    font-family: var(--font-script);
+    font-weight: 400;
+    font-size: clamp(2.5rem, 1.2rem + 5.2vw, 4.75rem);
+    line-height: 1.05;
+    color: var(--color-white);
+  }
+
+  .headline-main{
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: clamp(1.65rem, 0.9rem + 3.6vw, 3.25rem);
+    line-height: 1.15;
+    color: var(--color-white);
+    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    margin-top: .1em;
+  }
+
+  .headline-underline{
+    display: block;
+    width: min(92%, 560px);
+    height: 4px;
+    margin: clamp(10px, 1.6vw, 18px) auto 0;
+  }
+  .headline-underline img{ width: 100%; }
+
+  .subtext{
+    margin: 0;
+    max-width: 976px;
+    font-size: clamp(1.05rem, 0.85rem + 0.9vw, 1.375rem);
+    line-height: 1.5;
+    color: var(--color-text-body);
+    font-weight: 400;
+  }
+  .subtext strong{ font-weight: 700; }
+
+  .cta-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 1.6vw, 18px);
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .cta-row .btn{
+    height: clamp(52px, 7.5vw, 80px);
+    padding: 0 clamp(18px, 3vw, 30px);
+    border-radius: clamp(10px, 1.6vw, 15px);
+    font-size: clamp(1.0625rem, 0.85rem + 0.85vw, 1.375rem);
+    letter-spacing: -0.3px;
+    font-weight: 500;
+    flex: 0 1 auto;
+  }
+
+  @media (max-width: 420px){
+    .header-inner{ justify-content: center; }
+    .cta-row{ flex-direction: column; }
+    .cta-row .btn{ width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <img class="logo" src="assets/iql-logo.svg" alt="IQL — Institute for Quality Leadership">
+      <a href="#" class="btn btn-primary header-cta">להתחלת אבחון</a>
+    </div>
+    <img class="header-divider" src="assets/header-line.svg" alt="">
+  </header>
+
+  <main class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/hero-bg.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-content">
+      <p class="tagline">המקום שבו אמפתיה אנושית פוגשת את ה‑Velocity של ה‑AI</p>
+
+      <h1 class="headline">
+        <span class="headline-script">95% מהארגונים</span>
+        <span class="headline-main">עוד לא מצליחים להוביל ערך עם AI.</span>
+        <span class="headline-underline"><img src="assets/decorative-line.svg" alt=""></span>
+      </h1>
+
+      <p class="subtext">
+        הפער כמעט אף פעם לא טכנולוגי — הוא אנושי ומנהיגותי.<br>
+        גלו איפה הארגון שלכם עומד כדי להיות <strong>בטופ 5%</strong> שמובילים שינוי AI משמעותי.
+      </p>
+
+      <div class="cta-row">
+        <a href="nexus-leadership.html" class="btn btn-secondary">מה זה Nexus Leadership?</a>
+        <a href="#" class="btn btn-primary">להתחלת אבחון</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
